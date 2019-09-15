@@ -9,16 +9,16 @@ public class OccurenceOfCharacterTest {
 	static int outerLoopExecutedTimes=0;
 	public static void main(String[] args) {
 
-		//occurenceOfCharacterInString();
-		occurenceOfCharacterInStringUsingHashMap();
+		occurenceOfCharacterInString();
+		//occurenceOfCharacterInStringUsingHashMap();
 		// System.out.println(mp);
 	}// main
 
 	//method to count occurence Of Character In String
 	public static void occurenceOfCharacterInString() {
 
-		//String str = "sandipsandipsan";
-		String str = "abcdefghabcdefghijklmanop";
+		String str = "sameersameer";
+		//String str = "abcdefghabcdefghijklmanop";
 		
 		// get length of String
 		// Map mp=new HashMap<Character,Integer>();
