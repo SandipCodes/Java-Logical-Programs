@@ -34,7 +34,7 @@ public class MinMaxElementTest {
 			if(min > arr[i])
 			min=arr[i];
 		}//for
-		System.out.println("Max Element:" + min);
+		System.out.println("Mn Element:" + min);
 		
 	}
 	public static void getMinMaxElement() {
