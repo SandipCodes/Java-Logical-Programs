@@ -1,9 +1,11 @@
 package com.app.logical.programs;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class FindDuplicateElementsInArray {
 
@@ -12,10 +14,24 @@ public class FindDuplicateElementsInArray {
 	
 		//findDuplicateElementsInArray();
 		
-		findDuplicateElementsInArrayUsingHashMap();
-		
+		//findDuplicateElementsInArrayUsingHashMap();
+		findDuplicateElementsInArrayUsingSet();
 
 	}
+	
+	public static void findDuplicateElementsInArrayUsingSet() {
+		
+		int arr[]=new int[]{1,2,3,5,5,6,7,6,2,8,9,8};
+		
+		//set to store elements
+		Set<Integer> set=new HashSet();
+		for(int i=0;i<arr.length;i++) {
+			
+			if(set.add(arr[i]) ==false) {
+				System.out.println("Duplicate element:"+ arr[i]);
+			}//if
+		}//for
+	}//findDuplicateElementsInArrayUsingSet()
 	
 
 	public static void findDuplicateElementsInArray() {
