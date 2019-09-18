@@ -6,13 +6,16 @@
  */
 package com.app.logical.programs;
 
+import java.util.Stack;
+
 public class LongestValidParenthesis {
 
 	private static int first=0,second=0,forloop=0;
 	
 	public static void main(String[] args) {
 		
-		validParenthesisCheck();
+		//validParenthesisCheck();
+		validParenthesisCheckUsingStack();
 	}//main()
 	
 	private static void validParenthesisCheck(){
@@ -74,4 +77,53 @@ public class LongestValidParenthesis {
 		System.out.println("second:"+ second);
 	}//validParenthesisCheck()
 
+
+	private static void validParenthesisCheckUsingStack(){
+	
+		//String input=")))()()))))(())))";
+		String input=")))()()))))((()))))";
+		int output=0;
+		int len=input.length();
+
+		//create stack and push -1 as initial index to it
+		Stack<Integer> stk=new Stack<>();
+		stk.push(-1);
+
+		System.out.println("Input:"+ input);
+		
+		//traverse all the characters of given string
+		for(int i=0;i<len;i++) {
+			
+			if(input.charAt(i) =='(') {
+				
+				stk.push(i);
+			}//if
+			else {
+				
+				 //pop the previous opening brackets index 
+			      stk.pop();
+			      
+			      //check whether results formed by current string index lenth is 
+			      //greater than the length formed yet
+			      if(!stk.empty()) {
+			    	    /* int newLength=i-stk.peek();
+			    	     
+			    	     if(output != newLength) {
+			    	    	 output=Math.max(output, i- stk.peek());  	 
+			    	     }
+			    	     else {
+			    	    	 output= output +newLength;
+			    	     }*/
+			    	     
+			    	  output=Math.max(output, i- stk.peek());  	 
+			      }
+			      else {
+			    	  //if stack is empty push that elements index on the stack
+			    	  stk.push(i);
+			      }
+			  
+			}//else
+		}//for
+		System.out.println("output:"+ output);
+	}//
 }//class
