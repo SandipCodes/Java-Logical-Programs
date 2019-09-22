@@ -12,10 +12,10 @@ public class FindDuplicateElementsInArray {
 	public static void main(String[] args) {
 	
 	
-		//findDuplicateElementsInArray();
+		findDuplicateElementsInArray();
 		
 		//findDuplicateElementsInArrayUsingHashMap();
-		findDuplicateElementsInArrayUsingSet();
+		//findDuplicateElementsInArrayUsingSet();
 
 	}
 
@@ -56,7 +56,7 @@ public class FindDuplicateElementsInArray {
 			   
 			 int count=1;
 		
-			 for(int j=0;j<arr.length;j++) {
+			 for(int j=0;j<arr.length;j++) {//i+1;
 			
 				if(i != j) {
 					if(no==arr[j]) {
