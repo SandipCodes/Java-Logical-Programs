@@ -9,17 +9,71 @@ public class StringReverseTest {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the String to Reverse:");
 		String str = sc.next();
-
-		// char ch1=new char(s1.length());-->wrong statement
+		String reverse="";
+         int len=str.length();
+		
+         //reverse string in one line
+          //str= new StringBuilder(str).reverse().toString();
+           //System.out.println(str);
+          // char ch1=new char(s1.length());-->wrong statement
 		//method1
 		  //reverseMethod1(str);
 		// method2
 		    //reverseMethod2(str);
 
 		//method3
-		 reverseMethod3(str);
+		// reverseMethod3(str);
+         
+         //System.out.println(reverseStringUsingRecursion(str,reverse,len));
+         
+       //  reverse=reverseStr(str);
+         //System.out.println(reverse);
+         
+         //reverseStringUsingSB(str);
+         
+         reverseStringUsingSplit(str);
 	}// main
+	public static void reverseStringUsingSplit(String str) {
+		
+		String tokens[]=str.split("");
+		
+		for(int i=tokens.length-1;i>=0;i--) {
+			System.out.print(tokens[i]);
+		}//for
+	}//method
+	public static void reverseStringUsingSB(String str) {
 
+		System.out.println("input:"+str);
+		
+		StringBuilder sbStr=new StringBuilder();
+		
+		for(int i=str.length()-1;i>=0;i--) {
+			sbStr.append(str.charAt(i));
+		
+		}//for
+		
+		System.out.println("Output :"+ sbStr.toString());
+	}//reverseStringUsingSB()
+	
+	public static String reverseStr(String str) {
+		
+		if(str.length() < 2 || str.isEmpty() || str==null)
+			return str;
+		
+		return(reverseStr(str.substring(1)) +str.charAt(0));
+	
+	}
+	
+	public static String reverseStringUsingRecursion(String str,String reverse,int len){
+		
+		if(str.isEmpty() ||str==null || len <2)
+			return str; 
+		
+		if(--len >= 0)
+	         return (reverse+ str.charAt(len)+ reverseStringUsingRecursion(str,reverse,len));
+		
+	return reverse;
+	}
 	// method 1
 	public static void reverseMethod1(String str) {
 

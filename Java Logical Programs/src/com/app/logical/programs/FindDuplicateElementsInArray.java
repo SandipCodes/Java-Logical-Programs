@@ -18,7 +18,9 @@ public class FindDuplicateElementsInArray {
 		findDuplicateElementsInArrayUsingSet();
 
 	}
-	
+
+	//using hashset
+	//optimized logic to find duplicate element in array
 	public static void findDuplicateElementsInArrayUsingSet() {
 		
 		int arr[]=new int[]{1,2,3,5,5,6,7,6,2,8,9,8};
@@ -74,6 +76,8 @@ public class FindDuplicateElementsInArray {
 		
 	}//method
 
+	
+	//using hashmap
 	public static void findDuplicateElementsInArrayUsingHashMap(){
 		
 		int arr[]=new int[]{1,2,3,5,5,2,6,7,6,2,5,5};

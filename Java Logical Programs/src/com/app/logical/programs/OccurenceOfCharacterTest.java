@@ -22,10 +22,12 @@ public class OccurenceOfCharacterTest {
 		
 		// get length of String
 		// Map mp=new HashMap<Character,Integer>();
+
 		int len = str.length();
 		String doneChars = "";
 
 		label: for (int i = 0; i < len; i++) {
+
 
 			char ch = str.charAt(i);
 
@@ -46,7 +48,9 @@ public class OccurenceOfCharacterTest {
 
 			System.out.println("Character " + ch + " occured " + count + " times.");
 			outerLoopExecutedTimes++;
+
 			// mp.put(ch, count);
+			
 		} // outer for
 		//System.out.println(mp);
 		System.out.println("Outer loop Executes for "+ outerLoopExecutedTimes+ " times." );
