@@ -51,8 +51,6 @@ public class RemoveSpacesInString {
 		}//for
 		
 		System.out.println("output:"+output);
-	
 
-		
 	}
 }//class
