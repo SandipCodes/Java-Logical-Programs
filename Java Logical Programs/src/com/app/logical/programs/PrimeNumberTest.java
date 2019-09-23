@@ -92,6 +92,7 @@ public class PrimeNumberTest {
 		else
 			return "Given number is Prime number";
 	}
+	
 	public static void isPrime(int input) {
 
 		int i=0,loopCount=0;

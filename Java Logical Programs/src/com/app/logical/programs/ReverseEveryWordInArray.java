@@ -1,13 +1,38 @@
 package com.app.logical.programs;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class ReverseEveryWordInArray {
 
 	static int i=0;
 	public static void main(String[] args) {
 		//reverseAllWords();
-		reverseAllWordsUsingSplit();
+		//reverseAllWordsUsingSplit();
+		reverseUsingCollectionFW();
+		
 	}
+	
 
+public static void reverseUsingCollectionFW() {
+	
+	System.out.println("ReverseEveryWordInArray.reverseUsingCollectionFW()");
+	String sentence="welcome to java programming lang. how are you, my bro.";
+	
+	List< String> words = Arrays.asList(sentence.split("\\s"));
+		  
+	     Collections.reverse(words);
+		  
+		  StringBuilder sb = new StringBuilder(sentence.length());
+		 
+		  for (int i = words.size() - 1; i >= 0; i--) {
+		  sb.append(words.get(i));
+		  sb.append(' ');
+		  }
+		 
+		System.out.println(sb.toString().trim());	
+}
 	public static void reverseAllWords() {
 		String input="welcome to java programming lang. how are you, my bro.";
 		String output="";
@@ -59,8 +84,10 @@ public class ReverseEveryWordInArray {
 		
 		for(String word: words) {
 			
-			String revWord="";
-			int len1=word.length();
+			//String revWord= new StringBuilder(word).reverse().toString();
+			
+			  String revWord="";
+			  int len1=word.length();
 		
 			//reversing every word 
 			for(int k=len1-1;k >=0;  k--) {
